@@ -68,9 +68,10 @@
 </div>
 <div class="searchdiv">
     <span class="browsespan">Browse word definitions</span>
-    <form>
+    <form method="GET">
         <label>
-            <input type="text" class="wordinput">
+            {{ form }}
+            <input name="word" type="text" class="wordinput">
         </label>
     </form>
 </div>
