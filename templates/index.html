@@ -67,13 +67,19 @@
     <h2 class="mainsubtitle">The key to the language</h2>
 </div>
 <div class="searchdiv">
-    <span class="browsespan">Browse word definitions</span>
-    <form method="GET">
+    {% if 'word' in request.GET %}
+        Word exists
+        <br>
+        {{ definition }}
+    {% else %}
+        <span class="browsespan">Browse word definitions</span>
+        <form method="GET">
         <label>
             {{ form }}
             <input name="word" type="text" class="wordinput">
         </label>
-    </form>
+        </form>
+    {% endif %}
 </div>
 </body>
 </html>
